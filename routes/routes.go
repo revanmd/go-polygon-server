@@ -10,6 +10,7 @@ import (
 
 func SetupRoutes(app *fiber.App, db *mongo.Database) {
 	userHandler := &handlers.UserHandler{DB: db}
+	polygonHandler := &handlers.PolygonHandler{DB: db}
 
 	api := app.Group("/api")
 	api.Post("/login", userHandler.Login)
@@ -18,4 +19,6 @@ func SetupRoutes(app *fiber.App, db *mongo.Database) {
 	protected := api.Group("/v1", middleware.JWTMiddleware())
 	protected.Get("/users", userHandler.GetUsers)
 	protected.Post("/users", userHandler.CreateUser)
+
+	protected.Get("/polygons", polygonHandler.GetPolygons)
 }

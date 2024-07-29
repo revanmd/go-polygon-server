@@ -2,6 +2,7 @@ package response
 
 import (
 	"github.com/gofiber/fiber/v2"
+	"github.com/sirupsen/logrus"
 )
 
 type SuccessResponse struct {
@@ -11,6 +12,7 @@ type SuccessResponse struct {
 }
 
 func SuccessHandler(c *fiber.Ctx, statusCode int, statusDesc string, data interface{}) error {
+	logrus.Info(statusDesc)
 	response := SuccessResponse{
 		StatusCode: statusCode,
 		StatusDesc: statusDesc,
