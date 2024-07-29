@@ -4,7 +4,13 @@ go 1.20
 
 require github.com/go-playground/validator/v10 v10.22.0
 
-require github.com/golang-jwt/jwt/v4 v4.0.0 // indirect
+require (
+	github.com/golang-jwt/jwt/v4 v4.0.0 // indirect
+	github.com/paulmach/go.geo v0.0.0-20180829195134-22b514266d33 // indirect
+	github.com/paulmach/go.geojson v1.5.0 // indirect
+	github.com/paulmach/orb v0.11.1 // indirect
+	github.com/twpayne/go-geom v1.5.4 // indirect
+)
 
 require (
 	github.com/andybalholm/brotli v1.0.5 // indirect
@@ -15,9 +21,9 @@ require (
 	github.com/gofiber/fiber/v2 v2.52.5 // indirect
 	github.com/gofiber/jwt/v2 v2.2.7
 	github.com/golang/snappy v0.0.4 // indirect
-	github.com/google/uuid v1.5.0 // indirect
+	github.com/google/uuid v1.6.0 // indirect
 	github.com/joho/godotenv v1.5.1 // indirect
-	github.com/klauspost/compress v1.17.0 // indirect
+	github.com/klauspost/compress v1.17.7 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
